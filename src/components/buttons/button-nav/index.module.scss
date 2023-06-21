@@ -1,0 +1,25 @@
+@import '../../../variables.scss';
+.btn {
+    cursor: pointer;
+    padding: 5px;
+    background-color: transparent;
+    border: none;
+    transition: $fastTransition;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    &:hover {
+        background-color: $lightGray;
+    }
+    .img {
+        margin-right: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .text {
+        font-size: 14px;
+        text-transform: uppercase;
+        color: $textColor;
+    }
+}

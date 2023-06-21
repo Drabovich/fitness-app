@@ -1,0 +1,37 @@
+@import '../../../../variables.scss';
+.content {
+    padding: 10px;
+    position: relative;
+    min-height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .title {
+        color: $textColor;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+    div div span {
+        white-space: nowrap; /* Текст не переносится */
+        overflow: hidden; /* Обрезаем всё за пределами блока */
+        text-overflow: ellipsis; /* Добавляем многоточие */
+    }
+    .btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 10px;
+        background-color: transparent;
+        border: none;
+        position: relative;
+        bottom: 5px;
+        span {
+            cursor: pointer;
+            transition: all 0.2s linear;
+            color: $textColor;
+            &:hover {
+                color: $ocean;
+            }
+        }
+    }
+}

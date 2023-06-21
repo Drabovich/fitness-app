@@ -1,0 +1,16 @@
+@import '../../../variables.scss';
+
+.block {
+    margin: 15px 0;
+    overflow: auto;
+    @media (max-width: $mobileWidth) {
+        margin: 8px 0;
+    }
+    .content {
+        padding: 15px;
+        height: 100%;
+        @media (max-width: $mobileWidth) {
+            padding: 15px;
+        }
+    }
+}

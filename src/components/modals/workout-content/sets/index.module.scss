@@ -1,0 +1,43 @@
+@import '../../../../variables.scss';
+.content {
+    position: relative;
+    padding: 10px;
+    min-height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .title {
+        color: $textColor;
+        text-align: center;
+        margin-bottom: 25px;
+    }
+    .list {
+        max-height: 250px;
+        overflow: auto;
+        padding-top: 10px;
+    }
+    .back {
+        position: absolute;
+        top: 13px;
+        left: 15px;
+        color: $textColor;
+        cursor: pointer;
+        transition: all 0.2s linear;
+        &:hover {
+            color: $deepWater;
+        }
+    }
+    .addSetBtn {
+        background-color: transparent;
+        padding: 5px;
+        border: 0;
+        margin-top: 5px;
+        span {
+            cursor: pointer;
+            transition: all 0.2s linear;
+            &:hover {
+                color: $deepWater;
+            }
+        }
+    }
+}

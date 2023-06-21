@@ -1,0 +1,13 @@
+@import '../../../variables.scss';
+
+@media (max-width: $mobileWidth) {
+    form {
+        button {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translate(-50%);
+            width: 90%;
+        }
+    }
+}

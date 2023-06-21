@@ -1,0 +1,104 @@
+@import '../../variables.scss';
+.wrapper {
+    border: 1px solid $borderColor;
+    height: calc(((100vh - $headerHeight - $calendarHeaderHeight) - 10px) / 6);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s linear;
+    &:hover {
+        background-color: $lightGray;
+    }
+    @media (max-width: $tabletWidth) {
+        padding: 2px;
+        height: calc((100vw - 40px) / 6);
+    }
+    @media (max-height: 950px) {
+        padding: 0;
+    }
+}
+.dayHeader {
+    display: flex;
+    flex-direction: column;
+    @media (max-width: $mobileWidth) {
+        flex-direction: row;
+    }
+    @media (max-height: 950px) {
+        flex-direction: row;
+    }
+    .dayWeek {
+        @media (max-width: $tabletWidth) {
+            font-size: 10px;
+            margin-right: 0;
+        }
+        @media (max-height: 950px) {
+            margin-right: 20px;
+        }
+        @media (max-width: $mobileWidth) {
+            margin-right: 10px;
+        }
+    }
+    .number {
+        margin-bottom: 5px;
+        @media (max-width: $tabletWidth) {
+            font-size: 10px;
+            margin: 0;
+        }
+    }
+}
+
+.workoutList {
+    overflow: auto;
+    width: 100%;
+    .workout {
+        font-size: 12px;
+        color: $textColor;
+        font-weight: 600;
+        background-color: $wave;
+        padding: 2px 5px;
+        border-radius: 3px;
+        white-space: nowrap; /* Текст не переносится */
+        overflow: hidden; /* Обрезаем всё за пределами блока */
+        text-overflow: ellipsis; /* Добавляем многоточие */
+        width: 100%;
+        margin-bottom: 5px;
+        // transition: all 0.1s linear;
+        cursor: pointer;
+        &:hover {
+            background-color: #000 !important;
+            color: #fff;
+        }
+        @media (max-width: $mobileWidth) {
+            font-size: 9px;
+            padding: 0 3px;
+        }
+    }
+    .disabled {
+        background-color: #9d9d9d !important;
+        color: #fff;
+        cursor: default;
+        &:hover {
+            background-color: #9d9d9d !important;
+        }
+    }
+    .selectWorkout {
+        background-color: #000 !important;
+        color: #fff;
+    }
+}
+.currentDay {
+    border: 1px solid $pink;
+}
+.daySelect {
+    border: 1px solid $wave;
+}
+// .darkned {
+//     background-color: $color4;
+// }
+.dayOfTheLastMonth {
+    background: repeating-linear-gradient(-45deg, #fff, #fff 20px, $lightGray 22px, $lightGray 10px);
+    color: #9d9d9d;
+    cursor: auto;
+}

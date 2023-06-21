@@ -1,0 +1,15 @@
+@import '../../variables.scss';
+.modal {
+    position: absolute;
+    width: 400px;
+    z-index: 2;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 12px 0 #959595;
+    @media (max-width: $mobileWidth) {
+        top: auto !important;
+        left: auto !important;
+        bottom: 2% !important;
+        width: 95% !important;
+    }
+}
