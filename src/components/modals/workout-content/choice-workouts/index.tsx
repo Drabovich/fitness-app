@@ -7,6 +7,7 @@ import { useNavigate } from 'react-router-dom';
 import { ButtonStandard } from '@/components/buttons/button-standard';
 import { useAppDispatch, useAppSelector } from '@/hooks/redux-hook';
 import { selectSelectedDay } from '@/store/modal/selectors';
+import { closeWorkoutModal, openWorkoutModal } from '@/store/modal/slice';
 import { selectWorkouts } from '@/store/workout/selectors';
 import { addWorkoutToCalendarAsync } from '@/store/workout-on-calendar/asyncActions';
 import { selectIsLoadingWorkoutsCalendar } from '@/store/workout-on-calendar/selectors';
@@ -18,7 +19,6 @@ import { SelectNumber } from './select-number';
 import { SelectRepeat } from './select-repeat';
 
 import styles from './index.module.scss';
-import { closeWorkoutModal, openWorkoutModal } from '@/store/modal/slice';
 
 export const ChoiceWorkouts = () => {
     const [selectWorkout, setSelectWorkout] = useState<WorkoutOnCalendar | null>(null);

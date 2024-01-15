@@ -5,9 +5,10 @@ import { v4 as uuidv4 } from 'uuid';
 import { db } from '@/firebase';
 import { IReview } from '@/types/other';
 
+import { createAppThunk } from '../utils/thunk';
+
 import { reviewsFetchComplete, setIsLoadingReview } from './slice';
 import { ReviewsDataThunk } from './types';
-import { createAppThunk } from '../utils/thunk';
 
 export const addReviewAsync = createAppThunk(
     'reviews/addReview',

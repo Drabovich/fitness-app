@@ -3,6 +3,7 @@ import { MdArrowBack } from 'react-icons/md';
 
 import { useAppDispatch, useAppSelector } from '@/hooks/redux-hook';
 import { selectExerciseById } from '@/store/exercises/selectors';
+import { openWorkoutModal } from '@/store/modal/slice';
 import { updateExerciseInWorkoutOnCalendarAsync } from '@/store/workout-on-calendar/asyncActions';
 import { STEP_MODAL } from '@/types/other';
 import Tooltip from '@mui/material/Tooltip';
@@ -10,7 +11,6 @@ import Tooltip from '@mui/material/Tooltip';
 import { Set } from './set';
 
 import styles from './index.module.scss';
-import { openWorkoutModal } from '@/store/modal/slice';
 
 export const Sets = () => {
     const dispatch = useAppDispatch();

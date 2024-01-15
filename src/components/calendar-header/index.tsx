@@ -3,13 +3,13 @@ import { MdArrowBackIosNew, MdArrowForwardIos } from 'react-icons/md';
 
 import { ButtonOutline } from '@/components/buttons/button-outline';
 import { useAppDispatch, useAppSelector } from '@/hooks/redux-hook';
+import { openWorkoutModal } from '@/store/modal/slice';
 import { selectMonthIndex } from '@/store/month/selectors';
 import { decMonthIndex, incMonthIndex, resetMonthIndex } from '@/store/month/slice';
 import { STEP_MODAL } from '@/types/other';
 import { getCurrentDay, getYear } from '@/utils/dayjs';
 
 import styles from './index.module.scss';
-import { openWorkoutModal } from '@/store/modal/slice';
 
 export const CalendarHeader = memo(() => {
     const dispatch = useAppDispatch();

@@ -2,6 +2,7 @@ import { FC, useState } from 'react';
 import { BsPlusSquareDotted } from 'react-icons/bs';
 
 import { useAppDispatch } from '@/hooks/redux-hook';
+import { closeWorkoutModal, openWorkoutModal } from '@/store/modal/slice';
 import { STEP_MODAL } from '@/types/other';
 import Tooltip from '@mui/material/Tooltip';
 
@@ -9,7 +10,6 @@ import { DeleteWorkoutMenu } from './delete-workout-menu';
 import { WorkoutsList } from './workouts-list';
 
 import styles from './index.module.scss';
-import { closeWorkoutModal, openWorkoutModal } from '@/store/modal/slice';
 
 export const Workouts: FC = () => {
     const [isDeleteModalOpen, setIsDeleteModalOpen] = useState(false);

@@ -4,12 +4,12 @@ import { AiOutlineCloseSquare } from 'react-icons/ai';
 
 import { useAppDispatch, useAppSelector } from '@/hooks/redux-hook';
 import { selectSelectedDay } from '@/store/modal/selectors';
+import { openWorkoutModal } from '@/store/modal/slice';
 import { selectWorkoutsForCalendar } from '@/store/workout-on-calendar/selectors';
 import { STEP_MODAL } from '@/types/other';
 import { getWorkoutForTheDay } from '@/utils/workout';
 
 import styles from './index.module.scss';
-import { openWorkoutModal } from '@/store/modal/slice';
 
 type WorkoutListPropsType = {
     deleteWorkoutClickHandler: (workoutId: string) => void;

@@ -5,6 +5,7 @@ import { Dayjs } from 'dayjs';
 import { CalendarPopup } from '@/compound/calendar-popup';
 import { useAppDispatch, useAppSelector } from '@/hooks/redux-hook';
 import { selectSelectedDay, selectTempIdWorkout } from '@/store/modal/selectors';
+import { closeWorkoutModal, openWorkoutModal } from '@/store/modal/slice';
 import { DAY_FORMAT, STEP_MODAL } from '@/types/other';
 import { WorkoutOnCalendar } from '@/types/workout';
 import { getCurrentDay, getMonthIndexFromDate, getMonthIndexFromZeroToEleven } from '@/utils/dayjs';
@@ -14,7 +15,6 @@ import Slide from '@mui/material/Slide';
 import { WorkoutContentModal } from '../modals/workout-content';
 
 import styles from './index.module.scss';
-import { closeWorkoutModal, openWorkoutModal } from '@/store/modal/slice';
 
 interface DayProps {
     day: Dayjs;

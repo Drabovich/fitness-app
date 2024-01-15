@@ -3,13 +3,13 @@ import _ from 'lodash';
 import { MdArrowBack } from 'react-icons/md';
 
 import { useAppDispatch, useAppSelector } from '@/hooks/redux-hook';
+import { openWorkoutModal } from '@/store/modal/slice';
 import { selectWorkoutById } from '@/store/workout-on-calendar/selectors';
 import { STEP_MODAL } from '@/types/other';
 import { ExerciseInWorkoutOnCalendar } from '@/types/workout';
 import { getSortedExerciseByPosition } from '@/utils/exercise';
 
 import styles from './index.module.scss';
-import { openWorkoutModal } from '@/store/modal/slice';
 
 const cx = cnBind.bind(styles);
 

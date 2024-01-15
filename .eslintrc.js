@@ -24,6 +24,11 @@ module.exports = {
         'simple-import-sort/exports': 'error',
         'prettier/prettier': 'error',
     },
+    settings: {
+        react: {
+            "version": "detect"
+        }
+    },
     overrides: [
         {
             files: ['**/*.js', '**/*.ts', '**/*.tsx'],
