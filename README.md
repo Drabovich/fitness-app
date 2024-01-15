@@ -1,6 +1,6 @@
 # Fitness app
 
-## Используемые технологии
+## Technologies used
 * #### ReactJs
 * #### Redux Toolkit
 * #### TypeScript
