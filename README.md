@@ -1,7 +1,7 @@
 # Fitness app
 
 ## Technologies used
-* #### ReactJs
+* #### React
 * #### Redux Toolkit
 * #### TypeScript
 * #### Mirage JS is an API mocking library
